@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import getData from "../../firebase"
 import ProjectCard from "./Especific Components/ProjectCard"
+import "../Style/Projects.scss"
 
 function Projects() {
     const {isPending, isError, data } = useQuery({    
@@ -19,10 +20,11 @@ function Projects() {
     return (
         <>
             <h1>teste</h1>
-        
-            {data.map(projectData => (
-                <ProjectCard key={projectData.id} dataTunnel={projectData}/>
-            ))}
+            <div className="project-grid">
+                {data.map(projectData => (
+                    <ProjectCard key={projectData.id} dataTunnel={projectData}/>
+                ))}
+            </div>
         </>
     )
 }
