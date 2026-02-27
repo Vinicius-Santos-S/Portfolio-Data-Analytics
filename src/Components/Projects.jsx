@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
 import getData from "../../firebase"
+import ProjectCard from "./Especific Components/ProjectCard"
 
 function Projects() {
     const {isPending, isError, data } = useQuery({    
@@ -18,13 +19,9 @@ function Projects() {
     return (
         <>
             <h1>teste</h1>
-            {data.map(project => (
-                <div key={project.id}>
-                    <h2>{project.name}</h2>
-                    <p>{project.description}</p>
-                    <p>{project.technology}</p>
-                    <a href={project.link}>Ver projeto</a>
-                </div>
+        
+            {data.map(projectData => (
+                <ProjectCard key={projectData.id} dataTunnel={projectData}/>
             ))}
         </>
     )

@@ -27,7 +27,7 @@ const getData = async (type) => {
         console.log("request")
         return querySnapshot.docs.map(doc => ({
             id: doc.id,
-            ...doc.data().projectsInfo
+            ...doc.data().projectInfo
         }))
     } else {
         console.log("Nada")
