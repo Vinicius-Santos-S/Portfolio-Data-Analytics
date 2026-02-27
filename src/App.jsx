@@ -3,22 +3,26 @@ import Home from './Components/Home'
 import About from './Components/About'
 import Projects from './Components/Projects'
 import Contact from './Components/Home'
+import {Routes, Route } from "react-router";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { BrowserRouter, Routes, Route } from "react-router";
+const queryClient = new QueryClient();
 
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <main>
-        <Routes>
-          <Route path="/home" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/projects" element={<Projects/>} />
-          <Route path="/contact" element={<Contact/>} />
-        </Routes>
-      </main>
+      <QueryClientProvider client={queryClient}>
+        <Navbar/>
+        <main>
+          <Routes>
+            <Route path="/home" element={<Home/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/projects" element={<Projects/>} />
+            <Route path="/contact" element={<Contact/>} />
+          </Routes>
+        </main>
+      </QueryClientProvider>
     </>
   )
 }
