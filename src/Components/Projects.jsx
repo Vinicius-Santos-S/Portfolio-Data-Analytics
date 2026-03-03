@@ -19,14 +19,18 @@ function Projects() {
     }
     
     return (
-        <>
-            <h1>teste</h1>
+        <div className="projects-container" id="projects">
+            <div className="projects-header">
+                <h1>Projects</h1>
+                <div/>
+                <p>Come take a look at my projects</p>
+            </div>
             <motion.div className="project-grid">
                 {data.map(projectData => (
                     <ProjectCard key={projectData.id} dataTunnel={projectData}/>
                 ))}
             </motion.div>
-        </>
+        </div>
     )
 }
 
