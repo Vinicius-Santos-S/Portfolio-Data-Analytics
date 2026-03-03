@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+$primary-color: #242424;
+$secondary-color: #f2f2f2;
+$accent-color: #1f1f1f;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: $secondary-color;
+}
+
+.main-app {
+    background-color: $accent-color;
+    padding: 100px 30px 30px;
+
+    min-height: 100vh;
+}
+    

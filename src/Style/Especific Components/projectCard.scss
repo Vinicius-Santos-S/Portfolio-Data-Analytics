@@ -1,3 +1,86 @@
-.project-card {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+$primary-color: #242424;
+$secondary-color: #f2f2f2;
+$accent-color: #1f1f1f;
+
+a {
+    text-decoration: none;
+}
+
+
+
+.project-card-container {
     border: 1px solid black;
+    box-shadow: 12px 12px 15px 0px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 320px;
+    gap: 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.project-card-container .project-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.project-card-container .project-card-header .open-in-new-icon {    
+    height: 25px;
+    width: 25px;
+    background-color: $secondary-color;
+    padding: 3px;
+    margin: 5px;
+    border-radius: 10px;
+    fill: $primary-color;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
+}
+
+.project-card-container .project-card-content {
+    display: flex;
+    opacity: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    width: 100%;
+    gap: 20px;
+    height: 45%;
+    padding: 15px;
+}
+
+.project-card-container .project-card-content .project-card-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card-container .project-card-content .project-card-info h2 {
+    font-weight: 700;
+    
+}
+
+.project-card-container .project-card-content .project-card-info p {
+    width: 100%;
+    font-size: 12px;
+
+}
+
+.project-card-container .project-card-content .project-card-info ul {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.project-card-container .project-card-content .project-card-info ul li {
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 10px;
 }

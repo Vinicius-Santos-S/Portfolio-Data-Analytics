@@ -26,7 +26,7 @@ const getData = async (type) => {
         const querySnapshot = await getDocs(projectCollection)
         console.log("request")
         return querySnapshot.docs.map(doc => ({
-            id: doc.id,
+            id: doc.id, 
             ...doc.data().projectInfo
         }))
     } else {
