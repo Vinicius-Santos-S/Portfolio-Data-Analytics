@@ -1,0 +1,24 @@
+@use '../style';
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-container .about-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-container .about-header h1 {
+    font-size: 50px;
+}
+
+.about-container .about-header div {
+    border: 1px solid white;
+    height: 100px;
+    width: 1px;
+}
