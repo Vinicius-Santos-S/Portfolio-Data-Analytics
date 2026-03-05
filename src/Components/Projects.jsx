@@ -46,7 +46,14 @@ function Projects() {
     const filteredProjects = selectedTech ? data.filter(project => project.technologies.some(tech => tech.techName === selectedTech)) : data
 
     return (
-        <div className="projects-container" id="projects">
+        <motion.div 
+            className="projects-container" 
+            id="projects"
+            key="projects"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <div className="projects-header">
                 <h1>Projects</h1>
                 <div/>
@@ -74,14 +81,16 @@ function Projects() {
                     ))
                 }
             </ul>
-            <motion.div className="project-grid">
+            <motion.div className="project-grid" layout>
+                <AnimatePresence>
                     {
                         filteredProjects.map(projectData => (
-                            <ProjectCard key={projectData.id} dataTunnel={projectData}/>
+                            <ProjectCard key={projectData.id} dataTunnel={projectData} layout/>
                         )) 
-                    }
+                    }   
+                </AnimatePresence>
             </motion.div>
-        </div>
+        </motion.div>
     )
 }
 
