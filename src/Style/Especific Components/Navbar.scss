@@ -2,6 +2,7 @@
 
 .nav-bar {
     position: fixed;
+    z-index: 100;
     width: 100%;
     height: 60px;
     background-color: style.$primary-color;

@@ -4,7 +4,7 @@ import { useState } from "react"
 import OpenInNewIcon from "../../assets/open_in_new.svg?react";
 
 
-function ProjectCard({ dataTunnel }) {
+function ProjectCard({ id, dataTunnel }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -13,7 +13,9 @@ function ProjectCard({ dataTunnel }) {
                 className="project-card-container"
                 onHoverStart={() => setIsHovered(true)}
                 onHoverEnd={() => setIsHovered(false)}
-                animate={{ scale: isHovered ? 1.05 : 1 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{  opacity: 1, scale: isHovered ? 1.05 : 1 }}
+                end={{ opacity: 0, scale: 0.95 }}
                 style={{
                     backgroundImage: `url(https://l02pw9kshspbq2zg.public.blob.vercel-storage.com/raf%2C360x360%2C075%2Ct%2Cfafafa_ca443f4786.u3.jpg)`,
                 }}

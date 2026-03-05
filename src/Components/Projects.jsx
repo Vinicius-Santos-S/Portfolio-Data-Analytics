@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query"
-import { motion } from "motion/react"
+import { AnimatePresence, motion } from "motion/react"
 import { useState } from "react"
 import getData from "../../firebase"
 import ProjectCard from "./Especific Components/ProjectCard"
 import "../Style/Projects.scss"
-import { li } from "motion/react-client"
 
 function Projects() {
     const [selectedTech, setSelectedTech] = useState(null)
@@ -53,14 +52,19 @@ function Projects() {
                 <div/>
                 <p>Come take a look at my projects</p>
             </div>
-            <ul>
+            <div className="divisor"/>
+            <ul className="projects-filter-container">
                 {
                     uniqueTechnologies.map(techName => (
                         <motion.li
                             animate={{
-                                backgroundColor: selectedTech === techName ? "#007bff" : "#f8f9fa",
+                                backgroundColor: selectedTech === techName ? "#f2f2f2" : "#242424",
+                                color: selectedTech === techName ? "#242424" : "#f2f2f2"
                             }} 
-                            whileHover={{ backgroundColor: "#007bff" }}
+                            whileHover={{ 
+                                backgroundColor: "#f2f2f2",
+                                color: "#242424"
+                            }}
                             onClick={onClick}
                             item={techName}
                             key={techName}
@@ -71,9 +75,11 @@ function Projects() {
                 }
             </ul>
             <motion.div className="project-grid">
-                {filteredProjects.map(projectData => (
-                    <ProjectCard key={projectData.id} dataTunnel={projectData}/>
-                ))}
+                    {
+                        filteredProjects.map(projectData => (
+                            <ProjectCard key={projectData.id} dataTunnel={projectData}/>
+                        )) 
+                    }
             </motion.div>
         </div>
     )

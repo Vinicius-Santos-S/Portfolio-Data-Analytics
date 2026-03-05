@@ -1,9 +1,16 @@
 @use '../style';
 
+.divisor {
+    border: 1px solid white;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
 }
 
 .projects-container .projects-header {
@@ -25,6 +32,21 @@
 
 .projects-container .projects-header p {
     // border: 1px solid white;
+}
+
+.projects-filter-container {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    list-style: none;
+}
+
+.projects-filter-container li {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    min-width: 100px;
 }
 
 .projects-container .project-grid {
