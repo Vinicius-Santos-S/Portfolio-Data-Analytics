@@ -20,7 +20,7 @@ function ProjectCard({ id, dataTunnel }) {
             animate={{  opacity: 1, scale: isHovered ? 1.05 : 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             style={{
-                backgroundImage: `url(https://l02pw9kshspbq2zg.public.blob.vercel-storage.com/raf%2C360x360%2C075%2Ct%2Cfafafa_ca443f4786.u3.jpg)`,
+                backgroundImage: `url(${dataTunnel.image})`,
             }}
         >
             <motion.div 

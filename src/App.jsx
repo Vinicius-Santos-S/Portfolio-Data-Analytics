@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Navbar/>
+        <Navbar currentPage={location.pathname} />
         <main className='main-app'>
           <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname}>
