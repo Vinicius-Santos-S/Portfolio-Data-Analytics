@@ -1,11 +1,5 @@
 @use '../style';
 
-.divisor {
-    border: 1px solid style.$secondary-color;
-    height: 1px;
-    width: 100%;
-    margin: 0 auto;
-}
 
 .projects-container {
     display: flex;
@@ -29,8 +23,6 @@
     height: 100px;
     width: 1px; 
 }
-
-
 .projects-filter-container {
     display: flex;
     gap: 10px;

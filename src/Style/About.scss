@@ -2,25 +2,57 @@
 
 .about-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
 }
 
-.about-container .about-header {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+.about-container .image {
+    height: 400px;
+    width: 50%;
+    max-width: 800px;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://images.steamusercontent.com/ugc/2026103069836118693/CFBCA578374AD0E1F053D7DB7FD48063A8404E7A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+}
+
+.about-container .about-text {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    border: 1px solid style.$secondary-color;
+    width: 50%;
+    max-width: 1000px;
+    gap: 18px;
 }
 
-.about-container .about-header .image {
-    border: 1px solid style.$secondary-color;
-    height: 500px;
-    width: 500px;
+.about-container .about-text p {
+    
 }
 
-.about-container .about-header p {
+.about-container .about-text .projects-link-container {
+    width: 150px
+}
+
+.about-container .about-text .projects-link {
     border: 1px solid style.$secondary-color;
-    height: 500px;
-    width: 500px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+@media screen and (width <= 620px) {
+    .about-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-container .image {
+        width: 100%;
+    }
+
+    .about-container .about-text {
+        width: 100%;
+    }
 }

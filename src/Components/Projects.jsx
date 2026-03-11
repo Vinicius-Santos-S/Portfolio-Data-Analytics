@@ -59,7 +59,7 @@ function Projects() {
                 <div/>
                 <p>Come take a look at my projects</p>
             </div>
-            <div className="divisor"/>
+            <hr />
             <ul className="projects-filter-container">
                 {
                     uniqueTechnologies.map(techName => (
