@@ -7,18 +7,20 @@
 }
 
 .about-container .about-header {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     justify-content: center;
-    gap: 20px;
+    border: 1px solid style.$secondary-color;
 }
 
-.about-container .about-header h1 {
-    font-size: 50px;
+.about-container .about-header .image {
+    border: 1px solid style.$secondary-color;
+    height: 500px;
+    width: 500px;
 }
 
-.about-container .about-header div {
-    border: 1px solid white;
-    height: 100px;
-    width: 1px;
+.about-container .about-header p {
+    border: 1px solid style.$secondary-color;
+    height: 500px;
+    width: 500px;
 }

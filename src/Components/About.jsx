@@ -13,9 +13,8 @@ function About() {
             exit={{ opacity: 0 }}
         >
             <div className="about-header">
-                <h1>About Me</h1>
-                <div/>
-                <p>Come take a look at my projects</p>
+                <div className="image"/>
+                <p>como vou</p>
             </div>
         </motion.div>
     )

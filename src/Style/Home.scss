@@ -1,0 +1,67 @@
+@use '../style';
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container .home-header {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 300px;
+    width: 70%;
+}
+
+.home-container .home-header .social-content {
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    list-style: none;
+}
+
+.home-container .home-header .social-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container .home-header .social-content li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container .home-header .social-content li a .social-icon {
+    width: 23px;
+    height: 23px;
+}
+
+
+.home-container .home-header .home-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;   
+}
+
+.home-container .home-header .home-content h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.home-container .home-header .home-content p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.home-container .home-header .about-link-container {
+    width: 150px
+}
+
+.home-container .home-header .about-link {
+    border: 1px solid style.$secondary-color;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+}
