@@ -1,9 +1,12 @@
 {
-  "redirects": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/home",
-      "permanent": true
+      "src": "^/$",
+      "dest": "/home"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }

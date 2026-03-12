@@ -3,7 +3,7 @@ import Home from './Components/Home'
 import About from './Components/About'
 import Projects from './Components/Projects'
 import { AnimatePresence } from 'framer-motion'
-import { Routes, Route, useLocation } from "react-router";
+import { Routes, Route, useLocation, Navigate } from "react-router";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './_style.scss'
 
@@ -19,6 +19,7 @@ function App() {
         <main className='main-app'>
           <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<Navigate to="/home" replace />} />
               <Route path="/home" element={<Home/>} />
               <Route path="/about" element={<About/>} />
               <Route path="/projects" element={<Projects/>} />
