@@ -7,9 +7,18 @@ import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "../../Style/Especific Components/Navbar.scss"
 
-function Navbar({currentPage}) {
+function Navbar({ currentPage }) {
     const [isOpen, setIsOpen] = useState(false);
     const mobileNavRef = useRef(null);
+
+    const sideBarAnimations = {
+        show : {
+            x: 0,
+        },
+        hide : {
+            x : 180
+        }
+    }
 
     function useOutsideAlerter(ref) {
         useEffect(() => {
@@ -24,8 +33,8 @@ function Navbar({currentPage}) {
             // Bind the event listener
             document.addEventListener("mousedown", handleClickOutside);
             return () => {
-            // Unbind the event listener on clean up
-            document.removeEventListener("mousedown", handleClickOutside);
+                // Unbind the event listener on clean up
+                document.removeEventListener("mousedown", handleClickOutside);
             };
         }, [ref]);
     }
@@ -43,45 +52,61 @@ function Navbar({currentPage}) {
         <nav className="nav-bar">
             <div className="nav-bar-content">
                 <h1>Naooto</h1>
-                <div className="desktop-nav-bar-content">
-                    <NavLink className="nav-bar-link" to="/home" end>Home</NavLink>
-                    <NavLink className="nav-bar-link" to="/about" end>About</NavLink>
-                    <NavLink className="nav-bar-link" to="/projects">Projects</NavLink>
-                </div>
-                {/* <div onClick={() => setIsOpen(!isOpen)} className="mobile-menu-button">mobilebutton</div> */}
-                <MenuIcon className="mobile-menu-button" onClick={() => setIsOpen(!isOpen)}/>
-                <AnimatePresence>
-                        {
-                            isOpen &&        
-                                <motion.div 
-                                    ref={mobileNavRef} 
-                                    className="mobile-nav-bar-content"
-                                    initial={{ x: 220 }}
-                                    animate={{ x: 0 }}
-                                    exit={{ x: 220 }}
-                                    transition={{ duration: 0.3, type: "tween" }}
+                <div className="desktop-nav-bar-container" >
+                    {
+                        navBarContent.map((item, index) => (
+                            <NavLink onClick={() => setIsOpen(false)} to={item.path} end key={index}>
+                                <motion.div
+                                    className="nav-bar-link"
+                                    animate={{
+                                        backgroundColor: item.path === currentPage ? "#1E1F1D" : "#E5E9DB",
+                                    }}
+                                    whileHover={{
+                                        backgroundColor: item.path === currentPage ? "#1E1F1D" : "#d3d8c9"
+                                    }}
                                 >
-                                    {
-                                        navBarContent.map((item, index) => (
-                                            <NavLink onClick={() => setIsOpen(false)} to={item.path} end key={index}>
-                                                <motion.div 
-                                                    className="nav-bar-link"
-                                                    animate={{
-                                                        backgroundColor: currentPage === item.path ? "#1f1f1f" : "transparent",
-                                                    }}
-                                                    whileHover={{
-                                                        backgroundColor: "#1f1f1f",
-                                                    }}    
-                                                >
-                                                    {item.icon && <item.icon className="mobile-icon"/>}
-                                                    <p>{item.name}</p>
-                                                </motion.div>
-                                            </NavLink>
-                                        ))
-                                    }
-                                </motion.div>   
-                        }
-                </AnimatePresence>
+                                    {item.icon && <item.icon style={{ fill: item.path === currentPage ? "#E5E9DB" : "#1E1F1D"}} className="mobile-icon" />}
+                                    <motion.p
+                                        animate={{
+                                            color: item.path === currentPage ? "#E5E9DB" : "#1E1F1D"
+                                        }}
+                                    >
+                                        {item.name}
+                                    </motion.p>
+                                </motion.div>
+                            </NavLink>
+                        ))
+                    }
+                </div>
+                <MenuIcon className="mobile-menu-button" onClick={() => setIsOpen(!isOpen)} />    
+                <motion.div
+                    ref={mobileNavRef}
+                    className="mobile-side-bar-container"
+                    variants={sideBarAnimations}
+                    animate={ isOpen ? "show" : "hide"}
+                    transition={{ duration: 0.3, type: "tween" }}
+                >
+                    {
+                        navBarContent.map((item, index) => (
+                            <NavLink onClick={() => setIsOpen(false)} to={item.path} end key={index}>
+                                <motion.div
+                                    className="nav-bar-link"
+                                    animate={{
+                                        backgroundColor : item.path === currentPage ? "#1E1F1D" : "#E5E9DB",                                        
+                                    }}
+                                >
+                                    {item.icon && <item.icon style={{ fill : item.path === currentPage ? "#E5E9DB" : "#1E1F1D"}} className="mobile-icon" />}
+                                    <motion.p
+                                        animate={{
+                                            color: item.path === currentPage ? "#E5E9DB" : "#1E1F1D"
+                                        }}    
+                                    >{item.name}
+                                    </motion.p>
+                                </motion.div>
+                            </NavLink>
+                        ))
+                    }
+                </motion.div>    
             </div>
         </nav>
     )

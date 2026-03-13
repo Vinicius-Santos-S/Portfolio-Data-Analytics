@@ -20,9 +20,9 @@ function App() {
           <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Navigate to="/home" replace />} />
-              <Route path="/home" element={<Home/>} />
-              <Route path="/about" element={<About/>} />
-              <Route path="/projects" element={<Projects/>} />
+              <Route path="/home" element={<Home currentPage={location.pathname}/>} />
+              <Route path="/about" element={<About currentPage={location.pathname}/>} />
+              <Route path="/projects" element={<Projects currentPage={location.pathname}/>} />
             </Routes>
           </AnimatePresence>
         </main>

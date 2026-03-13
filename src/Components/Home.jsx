@@ -4,9 +4,9 @@ import GithubIcon from "../assets/github.svg?react"
 import LinkedinIcon from "../assets/linkedin.svg?react"
 import EmailIcon from "../assets/envelope-at-fill.svg?react"
 import "../Style/Home.scss"
+import "../_style.scss"
 
 function Home() {
-
     const socialData = [
         {
             name: "LinkedIn",
@@ -27,7 +27,7 @@ function Home() {
 
     return (
         <motion.div 
-            className="home-container"
+            className="home-container routePage"
             id="home"
             key="home"
             initial={{ opacity: 0 }}
@@ -57,10 +57,9 @@ function Home() {
                     <motion.div
                         className="about-link"
                         whileHover={{
-                            backgroundColor:"#f2f2f2",
-                            color: "#242424",
+                            backgroundColor: "#d3d8c9"
                         }}
-                    >
+                        >
                         More About Me
                     </motion.div>
                 </NavLink>    

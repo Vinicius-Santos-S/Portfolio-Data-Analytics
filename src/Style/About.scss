@@ -1,61 +1,73 @@
 @use '../style';
 
 .about-container {
+    padding: 65px 0px 0px 0px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 25px;
-    border: 1px solid style.$secondary-color;
 }
 
-.about-container .image {
-    border: 1px solid style.$secondary-color;
-    height: 500px;
-    max-height: 500px;
-    width: 50%;
-    max-width: 800px;
-    border-radius: 15px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("https://images.steamusercontent.com/ugc/2026103069836118693/CFBCA578374AD0E1F053D7DB7FD48063A8404E7A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+.about-container .about-header {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    gap: 20px;
+    // border: 1px solid black;
 }
 
-.about-container .about-text {
+.about-container .about-header .about-content {
+    // border: 1px solid red;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 50%;
-    max-width: 1000px;
-    gap: 18px;
 }
 
-.about-container .about-text p {
-    
+.about-container .about-header .about-content .my-name {
+    font-weight: 800;
+    font-size: 15px;
 }
 
-.about-container .about-text .projects-link-container {
+.about-container .about-header .about-content h1 {
+    // border: 1px solid green;
+    // mix-blend-mode: difference;
+    white-space: pre;
+    z-index: 3;
+    font-size: 80px;
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.about-container .about-header .about-content .about-text {
+    // margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-container .about-header .about-content .about-text p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.about-container .about-header .about-content .about-text .projects-link-container {
     width: 150px
 }
 
-.about-container .about-text .projects-link {
+.about-container .about-header .about-content .about-text .projects-link-container .projects-link {
     border: 1px solid style.$secondary-color;
     text-align: center;
     padding: 5px;
     border-radius: 10px;
 }
 
-@media screen and (width <= 620px) {
-    .about-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-container .image {
-        width: 100%;
-    }
-
-    .about-container .about-text {
-        width: 100%;
-    }
+.about-container .about-header .image {
+    // border: 1px solid greenyellow;
+    border-radius: 15px;
+    margin-top: 80px;
+    width: 50%;
+    height: 400px;
+    background-image: url("https://image.hm.com/assets/hm/d3/a5/d3a5a2ef08b6ec180f363d2833249dcb068adda5.jpg?imwidth=2160");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

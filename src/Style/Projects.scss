@@ -2,9 +2,11 @@
 
 
 .projects-container {
+    padding: 100px 0px 100px 0px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    
 }
 
 .projects-container .projects-header {
