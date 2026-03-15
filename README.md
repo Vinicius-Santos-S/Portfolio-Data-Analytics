@@ -10,7 +10,7 @@ This portfolio was developed using Firebase for project data storage, React + Vi
 
 ## Visualizations
 You can see the deploy page here:  
-[Deploy page](https://meusite.com)
+[Deploy page](https://portfolio-data-analytics-vinicius-santos-s-projects.vercel.app/projects)
 
 ## Contacts
 [LinkedIn](https://www.linkedin.com/in/vini-santos-silva/edit/intro)
