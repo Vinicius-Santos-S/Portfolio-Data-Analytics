@@ -2,33 +2,38 @@
 
 
 .projects-container {
-    padding: 100px 0px 100px 0px;
+    padding: 65px 0px 65px 0px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100% ;
     
 }
 
 .projects-container .projects-header {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
 }
 
 .projects-container .projects-header h1 {
-    font-size: 50px;
+    font-size: 70px;
+    font-family: "Story Script", sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
 
-.projects-container .projects-header div {
-    border: 1px solid style.$secondary-color;
-    height: 100px;
-    width: 1px; 
+.projects-container hr {
+   border: 1px solid style.$secondary-color;
 }
+
 .projects-filter-container {
-    display: flex;
-    gap: 10px;
-    justify-content: start;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    justify-content: left;
+    align-items: start;
+    gap: 5px;
     list-style: none;
 }
 
@@ -37,11 +42,12 @@
     border-radius: 10px;
     padding: 5px;
     text-align: center;
+    max-width: fit-content;
     min-width: 100px;
 }
 
 .projects-container .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 20px;
 }

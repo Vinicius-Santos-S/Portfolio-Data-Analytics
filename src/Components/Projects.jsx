@@ -47,16 +47,15 @@ function Projects() {
 
     return (
         <motion.div 
-            className="projects-container" 
+            className="projects-container routePage" 
             id="projects"
             key="projects"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className="projects-header">
+            <div className="projects-header ">
                 <h1>Projects</h1>
-                <div/>
                 <p>Come take a look at my projects</p>
             </div>
             <hr />
@@ -65,12 +64,12 @@ function Projects() {
                     uniqueTechnologies.map(techName => (
                         <motion.li
                             animate={{
-                                backgroundColor: selectedTech === techName ? "#f2f2f2" : "#242424",
-                                color: selectedTech === techName ? "#242424" : "#f2f2f2"
+                                backgroundColor: selectedTech === techName ? "#1E1F1D" : "#E5E9DB",
+                                color: selectedTech === techName ? "#E5E9DB" : "#1E1F1D"
                             }} 
                             whileHover={{ 
-                                backgroundColor: "#f2f2f2",
-                                color: "#242424"
+                                backgroundColor: "#d3d8c9",
+                                color: "#1E1F1D"
                             }}
                             onClick={onClick}
                             item={techName}

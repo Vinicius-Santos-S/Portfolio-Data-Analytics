@@ -31,9 +31,10 @@
     width: 130px;
     height: 150px;
     gap: 20px;
-    right: -130px;
+    right: -150px;
     top: 60px;
-    border-left: 2px solid black;
+    border-left: 2px solid style.$secondary_color;
+    background-color: style.$primary_color;
 }
 
 .nav-bar .nav-bar-content .desktop-nav-bar-container .nav-bar-link {
@@ -43,6 +44,7 @@
     align-items: center;
     border-radius: 5px;
     padding: 5px;
+    width: 100px;
 }
 
 @media screen and (width <= 1095px) {
@@ -57,6 +59,7 @@
         flex-direction: row;
         align-items: center;
         width: auto;
+        height: 100%;
         top: 0px;
         gap: 20px;
         right: 0px;

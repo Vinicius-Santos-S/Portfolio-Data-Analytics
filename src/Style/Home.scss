@@ -45,14 +45,14 @@
 }
 
 .home-container .home-header .home-content h1 {
-    font-size: 50px;
+    font-size: 70px;
     font-family: "Story Script", sans-serif;
     font-style: normal;
     font-weight: 300;
 }
 
 .home-container .home-header .home-content hr {
-    border-top: 1px solid style.$secondary-color;
+    border: 1px solid style.$secondary-color;
 }
 
 .home-container .home-header .home-content p {
@@ -61,12 +61,12 @@
 }
 
 .home-container .home-header .about-link-container {
-    width: 150px
+    width: fit-content
 }
 
 .home-container .home-header .about-link {
     border: 1px solid style.$secondary-color;
     text-align: center;
-    padding: 5px;
+    padding: 5px 10px 5px 10px;
     border-radius: 10px;
 }
