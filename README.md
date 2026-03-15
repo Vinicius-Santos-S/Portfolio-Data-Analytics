@@ -1,18 +1,16 @@
-# React + Vite
+# My Data Analitycs Portfólio!
+Welcome to my Data Analytics Portfolio!
+Here I present projects, dashboards, and real-world challenges I have solved using data analytics tools, techniques, and data-driven methodologies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
+This portfolio was developed using Firebase for project data storage, React + Vite to build a fast and modern interface, and Framer Motion to implement smooth and dynamic animations.  
 
-Currently, two official plugins are available:
+## Technologies
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)![Framer](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Visualizations
+You can see the deploy page here:  
+[Deploy page](https://meusite.com)
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contacts
+[LinkedIn](https://www.linkedin.com/in/vini-santos-silva/edit/intro)
